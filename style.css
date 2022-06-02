@@ -90,10 +90,20 @@ p{
   position: relative;
   margin-bottom: 3.5rem;
 
+
+  animation-name: elementUp;
+  animation-duration: 750ms;
+  animation-timing-function: ease-in-out;
+  
+
+
+
 }
 
 .card img{
   border-radius: 20px;
+
+ 
 
 }
 
@@ -124,5 +134,35 @@ span{
 
   text-align: center;
   text-transform: uppercase;
+
+  animation-name: elementDown;
+  animation-duration: 750ms;
+  animation-timing-function: ease;
+
+
+
 }
+
+@keyframes elementDown{
+  from{
+    opacity: 0;
+    top: -150px;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes elementUp{
+  0%{
+    opacity: 0;
+    bottom: -100px;
+  }
+  
+  100%{
+    opacity: 1;
+    bottom: -0px;
+  }
+}
+
 
