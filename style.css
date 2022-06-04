@@ -16,7 +16,7 @@
 
 body{
   background: hsla(233, 100%, 97%, 1);
-  max-width: 40rem;
+  max-width: 100VW;
   margin: 0 auto;
 }
 
@@ -100,10 +100,14 @@ main{
   animation-name: elementUp;
   animation-duration: 750ms;
   animation-timing-function: ease-in-out;
-  
+}
 
-
-
+.card:hover{
+ transform: scale(1.1);
+ transition-delay: 500ms;
+ transition-duration: 150ms;
+ transition-timing-function: ease-in-out;
+ opacity: 0.75;
 }
 
 .card img{
@@ -122,9 +126,10 @@ span{
 
   font-family: var(--ff-primary);
   
+}
 
-  
-
+.card p{
+  display: none;
 }
 
 .card .label{
@@ -176,16 +181,20 @@ span{
   body{
     display: flex;
     text-align: center;
+    align-items: center;
+    
+    
+    width: clamp(110rem, 10rem + 10vw, 100vw);
+    margin: 0;
 
-    max-width: 128rem;
     height: 72rem;
 
     
   }
 
   header{
-    height: 100vh;
-    width: 38rem;
+    height: clamp(72rem, 10rem + 10vh, 100vh);
+    width: clamp(38rem, 10rem + 10vw, 100vw);
     
   }
 
@@ -220,15 +229,21 @@ span{
  
 
   main{
-    margin: 6.4rem auto;
-    height: 100%;
-    width: 93rem;
+    margin: 6.4rem 10rem 2.5rem 10rem;
+    height: clamp(66rem, 10rem + 10vh, 100vh );
+    width: 100vw;
+    overflow: visible;
     display: grid;
     grid-template-areas: "A B E" "D C F";
     gap: 3.2rem;
-   
+ 
     
+   
   }
+
+
+
+  
   main > div:nth-child(1){
     grid-area: A;
   }
@@ -249,11 +264,31 @@ span{
   }
   main > div:nth-child(6){
     grid-area: F;
-    top: -22rem;
+    margin-top: -22rem;
   }
 
   .label, span{
     display: none;
+  }
+
+  main p{
+    font-family: var(--ff-secondary);
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    mix-blend-mode: normal;
+    color: var(--fc-secondary);
+    margin-top: 10rem;
+
+    text-align: center;
+
+    width: 30rem;
+
+    
+
+  
+
+    
+    
   }
 
 }
