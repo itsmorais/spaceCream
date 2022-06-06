@@ -16,7 +16,7 @@
 
 body{
   background: hsla(233, 100%, 97%, 1);
-  max-width: 100VW;
+  max-width: clamp(250rem, 10vw, 100vw);
   margin: 0 auto;
 }
 
@@ -35,13 +35,13 @@ header img{
 header .logo-name{
   background: hsla(275, 18%, 79%, 1);
   height: 5rem;
-  width: 40rem;
+  width: 100%;
   position: absolute;
   bottom: 2.5rem;
 
 }
 header .logo-name h1{
-  font-size: 4rem;
+  font-size: clamp(4.4rem, 5vw, 6rem);
   line-height: 34px;
   letter-spacing: 0.05em;
 
@@ -61,7 +61,7 @@ header p{
   
   color: hsla(274, 84%, 12%, 1);
 
-  font-size: 2rem;
+  font-size: clamp(1rem, 5vw, 2rem);
   line-height: 1.5rem;
 
   display: flex;
@@ -83,6 +83,7 @@ main{
 }
 
 .card{
+  text-align: center;
 
   position: relative;
   margin-bottom: 3.5rem;
@@ -96,10 +97,10 @@ main{
 
 .card:hover{
  transform: scale(1.1);
- transition-delay: 250ms;
+ transition-delay: 200ms;
  transition-duration: 150ms;
  transition-timing-function: ease-in-out;
- opacity: 0.75;
+ opacity: 0.9;
 }
 
 .card img{
@@ -109,7 +110,7 @@ main{
 
 span{
   color: hsla(232, 17%, 35%, 1);
-  font-size: 2rem;
+  font-size: clamp(1rem, 5vw, 2rem);
   line-height: 3.4rem;
 
   letter-spacing: 0.05rem;
@@ -124,14 +125,14 @@ span{
 
 .card .label{
   background: hsla(312, 91%, 96%, 1);
-  width: 12rem;
+  width: clamp(4rem, 20vw, 12rem);
   height: 3.5rem;
   border-radius: 20px;
 
   position: absolute;
 
   top: 2rem;
-  right: 4.5rem;
+  right: clamp(0.25rem, 10vw, 5rem);
 
   text-align: center;
   text-transform: uppercase;
@@ -164,23 +165,19 @@ span{
 }
 
 
-@media (min-width:550px){
+@media (min-width:500px){
   body{
     display: flex;
     text-align: center;
     align-items: center;
-    
-    
-    width: clamp(110rem, 10rem + 10vw, 100vw);
-    margin: 0;
 
-    height: 72rem;
+    margin: 0;
+    height: clamp(72rem, 10vh, 100vh)
   }
 
   header{
-    height: clamp(72rem, 10rem + 10vh, 100vh);
-    width: clamp(38rem, 10rem + 10vw, 100vw);
-    
+    height: clamp(72rem, 10vh, 100vh);
+   
   }
 
   header img{
@@ -194,7 +191,6 @@ span{
   }
 
   header .logo-name h1{
-    font-size: 4.8rem;
     text-align: center;
     padding: 2rem 0 2rem;
   }
@@ -205,7 +201,6 @@ span{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     text-align: center;
-    font-size: 2rem;
     line-height: 2rem;
     color: #ffffff;
     max-width: 27.5rem;
