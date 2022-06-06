@@ -39,11 +39,6 @@ header .logo-name{
   position: absolute;
   bottom: 2.5rem;
 
-  
-
-
-  
-
 }
 header .logo-name h1{
   font-size: 4rem;
@@ -58,13 +53,10 @@ header .logo-name h1{
   font-family: var(--ff-primary);
   font-weight: 400;
   
-
 }
 
 
 header p{
-
-
   width: 30rem;
   
   color: hsla(274, 84%, 12%, 1);
@@ -88,7 +80,6 @@ main{
   margin-top: 18rem;
   padding: 0 3.2rem;
   
-
 }
 
 .card{
@@ -102,9 +93,10 @@ main{
   animation-timing-function: ease-in-out;
 }
 
+
 .card:hover{
  transform: scale(1.1);
- transition-delay: 500ms;
+ transition-delay: 250ms;
  transition-duration: 150ms;
  transition-timing-function: ease-in-out;
  opacity: 0.75;
@@ -112,8 +104,6 @@ main{
 
 .card img{
   border-radius: 20px;
-
- 
 
 }
 
@@ -141,7 +131,7 @@ span{
   position: absolute;
 
   top: 2rem;
-  right: 2.5rem;
+  right: 4.5rem;
 
   text-align: center;
   text-transform: uppercase;
@@ -149,9 +139,6 @@ span{
   animation-name: elementDown;
   animation-duration: 750ms;
   animation-timing-function: ease;
-
-
-
 }
 
 @keyframes elementDown{
@@ -188,8 +175,6 @@ span{
     margin: 0;
 
     height: 72rem;
-
-    
   }
 
   header{
@@ -224,6 +209,7 @@ span{
     line-height: 2rem;
     color: #ffffff;
     max-width: 27.5rem;
+ 
   }
 
  
@@ -236,8 +222,6 @@ span{
     display: grid;
     grid-template-areas: "A B E" "D C F";
     gap: 3.2rem;
- 
-    
    
   }
 
@@ -282,13 +266,9 @@ span{
     text-align: center;
 
     width: 30rem;
-
-    
-
-  
-
-    
-    
+  }
+  .card p{
+    display:block;
   }
 
 }

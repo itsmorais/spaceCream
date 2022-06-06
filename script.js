@@ -61,7 +61,4 @@ function DesktopChanges(browser_size) {
    
   }}
 
-
-
-
 DesktopChanges(viewport)
